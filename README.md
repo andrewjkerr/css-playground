@@ -5,5 +5,5 @@ A collection of web templates that have been either hacked and slashed or create
 
 Current Templates
 -----------------
-*index.html: a hacked and slashed theme from the [http://staff.tumblr.com](Tumblr Staff Tumblog.)
-*2.html: a template I created from scratch to learn more about positioning using CSS.
+* index.html: a hacked and slashed theme from the [http://staff.tumblr.com](Tumblr Staff Tumblog.)
+* 2.html: a template I created from scratch to learn more about positioning using CSS.
