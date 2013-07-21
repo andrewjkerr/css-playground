@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>ANDREW KERR</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="http://static.tumblr.com/ehm1tdz/xlrmkqolj/styles.css" type="text/css">
+	
+	<style type="text/css">
+		a, .meta_data a:hover, .meta_data a:focus {color: #4EA8D7}
+		html.color0 a, html.color0 .meta_data a:hover, html.color0 .meta_data a:focus {color: #4EA8D7}
+		html.color1 a, html.color1 .meta_data a:hover, html.color1 .meta_data a:focus {color: #F19F35}
+		html, body, #container, #content, #inner {
+			height: 100%;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: #eeeeee;
+		}
+
+		p {
+			margin-bottom: 16px;
+		}
+
+		h1 a,
+		h1 a:hover, 
+		h1 a:visited,
+		h1 a:active {
+			color: #666666;
+		}
+
+		#container {
+			width: 960px;
+		}
+
+		#content {
+			width: 700px;
+			height: 90%;
+		}
+
+		#content #inner {
+			display: table;
+			width: 700px;
+			text-align: justify;
+		}
+
+		#content #inner h1 {
+			box-sizing: border-box;
+		}
+
+		#container {
+			margin: 0;
+			padding: 0;
+
+		}
+
+		aside {
+			z-index: 10;
+			margin-top: 0;
+			width: 214px;
+			position: fixed;
+			top: 0; bottom: 0; left: 0;
+			text-align: left;
+			background-color: #292929;
+		}
+
+		aside .sidebar-liner {
+			height: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+
+		aside .sidebar-liner-content {
+			display: table;
+			height: 100%;
+			width: 100%;
+		}
+
+		aside .sidebar-spacer {
+			height: 100%;
+			display: table-row;
+		}
+
+
+		aside .sidebar-liner .sidebar-border {
+			position: absolute;
+			right: 0px;
+			height: 100%;
+			width: 4px;
+			pointer-events: none;
+			background: rgba(0, 0, 0, 0.1);
+			z-index: 5;
+		}
+
+		aside .sidebar-liner nav .sidebar-border {
+			background: rgba(0, 0, 0, 0.8);
+			z-index: 2;
+		}
+
+		aside .badge {
+			height: 170px;
+			display: block;
+			outline: none;
+		}
+
+		aside .badge {background: #292929}
+
+		.logo-container {
+			position: relative;
+			display: block;
+			width: 79%; height: 100%;
+			margin: 0 auto;
+		}
+
+		.logo-container .logo-part {
+			position: absolute;
+			left: 0; right: 0; top: 21px;
+			pointer-events: none;
+			height: 168px; width: 168px;
+			background-size: contain;
+		}
+
+		aside .description {
+			padding: 0 1.5em;
+			font-size: 15px;
+			display: block;
+			text-align: left;
+			line-height: 1.4em;
+		}
+
+		aside .description > p:last-child {
+			margin-bottom: 0;
+		}
+
+		aside nav {
+			position: relative;
+		}
+
+		aside nav li, aside nav .nav-item {
+			display: block;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			margin: 0;
+		}
+
+		aside nav .point {
+			position: absolute;
+			right: 1.5em;
+			margin: 3px; margin-right: 0;
+			width: 0; height: 0;
+			border: 5px solid rgba(0, 0, 0, 0);
+		}
+
+		aside nav .point-right {
+			border-right-width: 0;
+			border-left-color: #FFF;
+		}
+
+		aside nav .nav-item:hover .point-right {
+			border-left-color: #262626;
+		}
+
+		aside nav .nav-item-label {
+			white-space: nowrap;
+		}
+
+		aside nav .nav-item-spacer, aside nav .nav-item-spacer:hover {
+			display: block;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			margin: 0;
+			font-size: 0;
+			background-color: #292929;
+		}
+
+		aside nav .nav-item {
+			z-index: 1;
+			background-color: #292929;
+			font-size: 18px;
+			padding: 20px 1.5em;
+			position: relative;
+			color: #ffffff !important;
+		}
+
+		aside nav .search.nav-item {
+			width: 100%;
+			padding-left: 0; padding-right: 0;
+			margin: 0;
+			border: none;
+			font-family: inherit;
+			text-align: inherit;
+		}
+
+		aside nav .nav-item:hover, aside nav .nav-item:focus {
+			z-index: 4;
+			outline: none;
+			color: #262626 !important;
+		}
+		aside nav .nav-item:hover, aside nav .nav-item:focus {background-color: #4EA8D7}
+		html.color0 aside nav .nav-item:hover, html.color0 aside nav .nav-item:focus {background-color: #4EA8D7}
+		html.color1 aside nav .nav-item:hover, html.color1 aside nav .nav-item:focus {background-color: #F19F35}
+
+		@media (max-height: 820px) {
+
+			aside nav .nav-item {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				font-size: 15px;
+			}
+
+		}
+
+		@media (max-height: 730px) {
+			
+			.badge {
+				margin-bottom: 10px;
+			}
+
+			aside nav {
+				margin-top: 10px;
+			}
+
+		}
+
+		@media (max-height: 650px) {
+			
+			aside nav .nav-item {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				font-size: 15px;
+			}
+			
+		}
+
+		@media (max-height: 550px) {
+			
+			aside .description > p+* {
+				display: none;
+			}
+		}
+
+		#content {
+			border-width: 2px;
+			padding-top: 34px;
+		}
+
+		@media only screen and (max-width: 979px) {
+			
+			#container {
+				width: 760px;
+			}
+
+			#content {
+				width: 500px;
+			}
+
+		}
+
+		@media only screen and (min-width: 1170px) {
+
+			#container {
+				width: 100%;
+			}
+
+			#content {
+				width: 100%;
+			}
+
+			#content #inner {
+				margin: 0 auto;
+			}
+		}
+
+		footer {
+			clear: both;
+			text-align: center;
+			height: 50px;
+		}
+
+		footer .copyright {
+
+			font-family: 'Helvetica Neue', Helvetica, sans-serif;
+			font-weight: 200;
+			font-size: 14px;
+			text-align: center;
+			margin-bottom: 17px;
+			color: #333333;
+
+		}
+	</style>
+
+</head>
+
+<body id="staff">
+
+	<div id="container">
+
+		<aside>
+			<div class="sidebar-liner">
+				
+				<div class="sidebar-liner-content">
+				
+					<div class="sidebar-border"></div>
+				
+						<a href="/" class="badge">
+				
+							<div class="logo-container">
+				
+								<img src="aklogo.png" style="margin-top: 20px; height: 170px; width: 170px" />
+				
+							</div>
+				
+						</a>
+
+					<nav class="pages"><div class="sidebar-border"></div>
+
+						<ul>
+
+							<li><a class="nav-item-spacer"><br></a></li>
+
+							<li><a href="http://www.andrewjkerr.com/" class="nav-item"><span class="point point-right"></span><span class="nav-item-label">Home</span></a></li>
+							<li><a href="http://www.andrewjkerr.com/blog" class="nav-item"><span class="point point-right"></span><span class="nav-item-label">Blog</span></a></li>
+							<li><a href="http://www.andrewjkerr.com/wiki" class="nav-item"><span class="point point-right"></span><span class="nav-item-label">Wiki</span></a></li>
+							<li><a href="http://www.github.com/andrewjkerr" class="nav-item"><span class="point point-right"></span><span class="nav-item-label">GitHub</span></a></li>
+							<li><a href="mailto:andrewjkerr47@gmail.com" class="nav-item"><span class="point point-right"></span><span class="nav-item-label">Contact</span></a></li>
+
+							<li><a class="nav-item-spacer"><br></a></li>
+
+						</ul>
+					</nav>
+					
+					<div class="description">
+						<p>A CSS playground for <a href="http://www.andrewjkerr.com">Andrew Kerr</a> based on the <a href="http://staff.tumblr.com">Tumblr Staff Tumblog.</a></p>
+					</div>
+				</div>
+			</div>
+		</aside>
+	
+
+		<section id="content">
+
+			<div id="inner">
+				<h1>WELCOME</h1>
+				<p>Hello there stranger! You've seem to stumble upon my CSS playground based on the <a href="http://staff.tumblr.com/">Staff Tumblr Tumblog</a> theme. I guess that makes you a stumblr...</p>
+				<p>Terrible puns aside, I really suck at CSS and design in general. However, I'm looking to improve my skills in order to make more attractive web applications. If you look at the latest version of <a href="http://www.andrewjkerr.com/roast/blonde">Roast, a static page generator designed for resumes,</a> it looks very clunky and ugly. Bootstrap helps a LOT with the positioning of elements, but not exactly with the aesthetics.</p>
+				<p>Hopefully whatever I learn from this playground can be applied to my future projects and current website. But, for now, feel free to take a look around and compare my progress to the <a href="http://staff.tumblr.com/">Staff Tumblr Tumblog</a>. Enjoy!</p>
+						
+				<footer>
+
+					<p class="copyright">
+						<h2>ANDREW KERR | 813.699.0653 | andrewjkerr47 AT gmail DOT com</h2>
+						<p style="text-align: center">Theme hacked and slashed from <a href="http://staff.tumblr.com/">Tumblr Staff Tumblog.</a></p>
+					</p>
+
+				</footer>
+
+			</div>
+
+		</section>
+
+	</div>
+</body>
+
+<script type="text/javascript">document.documentElement.className+=' color'+Math.floor(Math.random()*2).toString();</script>
+
+</html>
